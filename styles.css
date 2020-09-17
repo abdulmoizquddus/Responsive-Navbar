@@ -1,3 +1,6 @@
+html {
+  height: 100%;
+}
 * {
   padding: 0;
   margin: 0;
@@ -8,6 +11,7 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  height: 100%;
 }
 nav {
   background: #0082e6;
@@ -15,6 +19,71 @@ nav {
   width: 100%;
   display: flex;
   position: relative;
+}
+#bgimg {
+  width: 100%;
+  height: 100%;
+  background: url("bgimg.jpg") no-repeat center;
+  padding: 0 40px;
+  display: flex;
+}
+#intrbox {
+  margin-top: 50px;
+  width: 100%;
+  height: 60%;
+  background: linear-gradient(#0082e6, #00ffe6);
+  border: transparent 2px;
+  border-radius: 20px;
+  padding: 20px;
+  text-transform: uppercase;
+  position: relative;
+}
+#intrbox > h1 {
+  color: white;
+  letter-spacing: 5px;
+  text-align: center;
+  font-weight: 700;
+  font-family: sans-serif;
+}
+#boxes {
+  position: relative;
+  top: 33.333%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.box {
+  overflow: hidden;
+  width: 250px;
+  height: 250px;
+  background: transparent;
+  border: solid 2px #2c3e50;
+  border-radius: 15px;
+  padding: 0px;
+}
+.box h2 {
+  text-align: center;
+  margin: 0;
+  background: transparent;
+  height: 42px;
+}
+.box:hover h2 {
+  transition: 1s;
+  background: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+.box p {
+  width: 100%;
+  height: 83%;
+}
+#box1 p {
+  background: url("pic1.jpg") center;
+}
+#box2 p {
+  background: url("pic2.jpg") center;
+}
+#box3 p {
+  background: url("pic3.jpg") center;
 }
 label.logo {
   color: white;
@@ -39,7 +108,8 @@ a:hover {
   padding: 3px;
   transition: 0.3s;
 }
-#chkbox {
+#chkbox,
+#chkbtn {
   display: none;
 }
 @media (max-width: 600px) {
@@ -103,5 +173,13 @@ a:hover {
     font-size: 25px;
     line-height: 70px;
     padding-left: 20px;
+  }
+
+  #intrbox,
+  #bgimg {
+    height: min-content;
+  }
+  .box {
+    margin-top: 20px;
   }
 }
