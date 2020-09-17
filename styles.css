@@ -18,7 +18,8 @@ nav {
   height: 80px;
   width: 100%;
   display: flex;
-  position: relative;
+  position: fixed;
+  z-index: 1;
 }
 #bgimg {
   width: 100%;
@@ -28,7 +29,7 @@ nav {
   display: flex;
 }
 #intrbox {
-  margin-top: 50px;
+  margin-top: 150px;
   width: 100%;
   height: 60%;
   background: linear-gradient(#0082e6, #00ffe6);
